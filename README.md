@@ -3,3 +3,18 @@
 A project that implements a laptop factory as a distributed system with load balancer and cache. 
 The project implemented to run on Khoury machines which is a linux envoriment.
 ## Step by step usage
+- Need to ssh to Khoury machine
+- Make to build program. It will create three executable files (server, client, and loadbalancer)
+- Each server, client, and loadbalancer need to run on different Khoury machine. 
+- You can access different VDI machines via ssh by specifying their addresses. VDI machine addresses range from vdi-linux-030.ccs.neu.edu to vdi-linux-070.ccs.neu.edu.
+- To run the server (generic)
+  - ./server [unique id] [0]
+- To run the load balancer
+  - ./loadbalancer [port #] [# of servers] [cache size] [number of replicas] [algorithm] (repeat [ID] [IP] [port #])
+    1. Port number
+    2. Number of servers
+    3. Cache size
+    4. Number of replicas each server has
+    5. Algorithm (1 for consistent hashing algorith, 0 for random distribution)
+    6. Unique ID, IP, and port of all peer factories
+
