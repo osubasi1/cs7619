@@ -17,4 +17,16 @@ The project implemented to run on Khoury machines which is a linux envoriment.
     4. Number of replicas each server has
     5. Algorithm (1 for consistent hashing algorith, 0 for random distribution)
     6. Unique ID, IP, and port of all peer factories
+ - To run client
+  - ./client [ip address] [port #] [# of customer] [# of orders] [request type]
+    1.ip address of loadbalancer
+    2.Port number of loadbalancer
+    3.Number of customer
+    4.Number of orders
+    5.Request type
+      - 1 for laptop order request (write request)
+      - 2 for customer record read request (need to pass 1 as number of customer)
+      - 3 print all the customer record (need to pass 1 as number of customer)
+      - 5 print all the cache content (need to pass 1 as number of customer)
+      - 6 read request for a specific customer (need to pass customer id as number of customer)
 
